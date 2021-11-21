@@ -5,9 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/color-selection.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <title>Simple Color Picker</title>
 </head>
 <body>
-    
+    <div class="wrapper">
+        <div class="show-color"></div>
+        <div class="bottom">
+            <div class="left">
+                <div class="inputs-container">
+                    <input type="range"   id="red" min="0" max="255" step="1" value="0" >
+                </div>
+                <div class="inputs-container">
+                    <input type="range" id="blue" min="0" max="255" step="1" value="0"  >
+                </div>
+                <div class="inputs-container">
+                    <input type="range" id="green" min="0" max="255" step="1" value="0"  >
+                </div>
+            </div>
+            <div  class="right">
+                <div>
+                    <span>RGB : </span>
+                    <input type="text" value="mamd" readonly />
+                    <button>Copy <span class="material-icons" >&#xe14d;</span></button>
+                </div>
+                <div>
+                    <span>HEX : </span>
+                    <input type="text" value="" readonly />
+                    <button>Copy   <span class="material-icons" >&#xe14d;</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
