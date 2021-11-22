@@ -24,7 +24,6 @@ body{
     -khtml-user-select: none; 
     -moz-user-select: none; 
     -ms-user-select: none; 
-
 }
 .wrapper{
     width: 100%;
@@ -197,6 +196,7 @@ body{
     align-items: center;
     align-content: center;
 }
+
 .modal-container .modal{
     direction: rtl;
     width: 500px;
@@ -209,10 +209,12 @@ body{
     font-size: 20px;
     position: relative;
 }
+
 .modal img#icon{
     width: 100px;
     margin: 20px;
 }
+
 .modal-container .time-line{
     width: 100%;
     height: 5px;
@@ -222,12 +224,81 @@ body{
     bottom: 0;
 
 }
+
+
+/*
+    *responsive
+*/ 
+@media only screen and (max-width:1200px) {
+    .wrapper{
+        display: block;
+    }
+    .wrapper .credits { 
+        margin: auto;
+    }
+    .wrapper .credits p{
+        width: auto;
+        font-size: 14px;
+        margin: 15px 0;
+    }
+    .wrapper .credits h1{
+        font-size: 19px;
+        font-weight: bold;
+    }
+    .wrapper .credits h2{
+        font-size: 16px;
+    }
+    .show-color{
+        margin: auto;
+        width: 60%;
+        height: 200px;
+    }
+    .bottom{
+        margin: auto;
+        text-align: center;
+        display: block;
+    }
+    .bottom div{
+        display: inline-block;
+        margin: auto;
+    }
+    .bottom .code-outputs{
+        width: 100%;
+        margin: 20px auto;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .bottom .inputs-container{
+        margin: 10px auto;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .wrapper .credits p{
+        width: 300px;
+        font-size: 14px;
+        margin: 15px auto;
+    }
+}
+
+@media only screen and (max-width:450px){
+    .show-color{
+        margin: auto;
+        width: 80%;
+        height: 200px;
+    }
+}
+
+/* 
+    *some codes
+*/
+
 .tl-animation{
     animation: time_line 3s linear  1 ;
 }
-
-
-
 @keyframes time_line {
     from{
         width: 0;

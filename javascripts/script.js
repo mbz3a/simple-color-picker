@@ -2,7 +2,6 @@ let show_color= document.getElementById('show-color');
 var r = document.querySelector(':root');
 let hex_elmt = document.getElementById('hex');
 let rgb_elmt = document.getElementById('rgb');
-
 const dec_to_hex = (input_num)=>{
     var inpt = Number(input_num);
     var divisor = inpt;
@@ -39,7 +38,6 @@ const dec_to_hex = (input_num)=>{
     }
     return hexcode;
 }
-
 const give_zero = (strs)=>{
     let mkNum = Number(strs);
     if( mkNum <10){
@@ -70,7 +68,6 @@ const give_zero = (strs)=>{
         return strs;
     }
 }
-
 const make_changes = ()=>{ 
     let allranges = document.querySelectorAll('.ranges');
     var range1 = dec_to_hex(allranges[0].value) ;
