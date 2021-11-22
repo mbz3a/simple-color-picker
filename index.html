@@ -12,34 +12,43 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="show-color"></div>
+        <div class="show-color" id="show-color"></div>
+
         <div class="bottom">
             <div class="left">
                 <div class="inputs-container">
-                    <input type="range" class="ranges"   id="red" min="0" max="255" step="1" value="18" >
+                    <input type="range" class="ranges"   id="red" min="0" max="255" step="1" value="150" >
                 </div>
                 <div class="inputs-container">
-                    <input type="range" class="ranges"  id="blue" min="0" max="255" step="1" value="19"  >
+                    <input type="range" class="ranges"  id="blue" min="0" max="255" step="1" value="109"  >
                 </div>
                 <div class="inputs-container">
-                    <input type="range"  class="ranges" id="green" min="0" max="255" step="1" value="60"  >
+                    <input type="range"  class="ranges" id="green" min="0" max="255" step="1" value="100"  >
                 </div>
             </div>
             <div  class="right">
                 <div>
                     <span>RGB : </span>
-                    <input type="text" value="mamd" readonly />
-                    <button>Copy <span class="material-icons" >&#xe14d;</span></button>
+                    <input type="text" id="rgb" value="" readonly />
+                    <button class="btns-copy">Copy <span class="material-icons" >&#xe14d;</span></button>
                 </div>
                 <div>
                     <span>HEX : </span>
-                    <input type="text" value="" readonly />
-                    <button>Copy   <span class="material-icons" >&#xe14d;</span></button>
+                    <input type="text" id="hex" value="" readonly />
+                    <button class="btns-copy">Copy   <span class="material-icons" >&#xe14d;</span></button>
                 </div>
             </div>
         </div>
-    </div>
 
+    </div>
+    <div id="modal" class="modal-container">
+        <div class="modal modal-limited-time">
+            <p>متن شما با موفقیت کپی شد.</p>
+            <img src="./img/checked.png" id="icon" alt="">
+            <div id="timeline" class="time-line"></div>
+            
+        </div>
+    </div>
     <script src="./javascripts/script.js"></script>
 </body>
 </html>

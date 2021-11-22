@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+@import url('../font/Vazir/css/style.css');
+:root{
+    --bgcolor : #8a39cc ;
+}
 *{
     margin: 0;
     padding: 0;
@@ -16,6 +19,12 @@ body{
     font-family: 'Roboto', sans-serif;
     background: #1d1d1d;
     color: #fff;
+    user-select: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+
 }
 .wrapper{
     width: 100%;
@@ -29,7 +38,7 @@ body{
 .show-color{
     width: 80%;
     height: 270px;
-    background: rgba(71, 168, 172);
+    background: var(--bgcolor);
     border-radius: 17px;
 }
 .bottom{
@@ -158,4 +167,63 @@ body{
 }
 .right div:hover  button {
     opacity: 1;
+}
+
+
+/*
+    *modals part
+*/ 
+.modal-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(00,000,0,0.4);
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.modal-container .modal{
+    direction: rtl;
+    width: 500px;
+    padding: 30px;
+    background: #353535;
+    border-radius: 5px;
+    text-align: center;
+    font-family: vazir;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+}
+.modal img#icon{
+    width: 100px;
+    margin: 20px;
+}
+.modal-container .time-line{
+    width: 100%;
+    height: 5px;
+    background: cornflowerblue;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+}
+.tl-animation{
+    animation: time_line 3s linear  1 ;
+}
+
+
+
+@keyframes time_line {
+    from{
+        width: 0;
+        opacity: 0;
+    } 
+    to{
+        opacity: 1;
+        width: 100%;
+    }
 }
